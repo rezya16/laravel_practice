@@ -1,0 +1,9 @@
+mariadb:
+  image: 'bitnami/mariadb:10.3'
+  environment:
+    - ALLOW_EMPTY_PASSWORD=yes
+  ports:
+    - '3306:3306'
+  restart: on-failure
+  volumes:
+    - ./docker/mysql:/var/lib/mysql
